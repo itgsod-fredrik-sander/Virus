@@ -34,14 +34,14 @@ def from_rovarsproket(string)
 			if string[i]+string[i+1]+string[i+2] == string[i]+'o'+string[i]
 				string[i+1] = ''
 				temp << string[i]
-			elsif string[i] =~ /[aeiouy]/
+			elsif string[i] =~ /[aeiouyåäö]/ && string[i] =~ / /
 				temp << string[i]
 			end
 		end
 		i += 1
 	end
 
-	if string[string.size - 1] =~ /[aeiouy]/
+	if string[string.size - 1] =~ /[aeiouy]/ && string[string.size - 1] =~ / /
 		temp << string[string.size - 1]
 	end
 
